@@ -386,7 +386,6 @@ func (a *Application) RegisterAndServeBot() {
 			if _, err := discord.ApplicationCommandCreate(discord.State.User.ID, "", cmd); err != nil {
 				log.Panicf("Cannot create '%v' command: %v", cmd.Name, err)
 			}
-			log.Println(fmt.Sprintf("Registered ApplicationCommand : [%s]", cmd.Name))
 		}
 
 	})
